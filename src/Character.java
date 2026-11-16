@@ -15,7 +15,10 @@ public class Character {
 	        this.level = checkRange(level, 0, 5);
 	    }
 
-	   
+	    public Character(int health, int level) {
+	        this("Unknown", health, level);
+	    }
+
 	    private int checkRange(int num, int min, int max) {
 	        if (num < min) return min;
 	        if (num > max) return max;
@@ -29,13 +32,17 @@ public class Character {
 	    public void levelUp() {
 	        if (level < 5) {
 	            level++;
+	        } else {
+	            System.out.println("Sorry you are already max level!");
 	        }
 	    }
 
 	    public void heal(int amount) {
+	        if (amount <= 0) return;
 	        health = checkRange(health + amount, 0, 10);
 	    }
 
+	    @Override
 	    public String toString() {
 	        return "Name: " + name + "\n" + "Health: " + health + "\n" + "Level: " + level;
 	    }
