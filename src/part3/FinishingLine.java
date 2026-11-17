@@ -9,7 +9,6 @@ private int finishedPlayers = 1;
             System.out.println("========> " + h.name + " Finished first!");
             System.out.println("**********************");
         } else {
-
             System.out.println("========> "+h.name+" finished on the "+ finishedPlayers++ +"-th place");
 
          //   finishedPlayers++;

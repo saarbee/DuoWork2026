@@ -8,12 +8,12 @@ import java.util.Scanner;
 public class StudentReport {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
 		 Scanner input = new Scanner(System.in);
 	        System.out.print("Enter department file name: ");
-	        String csFileName = input.next();
+	        String csFileName = input.next() + ".txt";
 	        System.out.print("Enter course file name: ");
-	        String courseFileName = input.next();
+	        String courseFileName = input.next() + ".txt";
          try {
 	        Scanner cs = new Scanner(new File(csFileName));          
 	        Scanner course = new Scanner(new File(courseFileName));  
@@ -67,5 +67,3 @@ public class StudentReport {
 	
 	}
 }
-
-
