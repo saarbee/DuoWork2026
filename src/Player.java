@@ -36,13 +36,18 @@ public class Player extends Character {
         }
         return false;
     }
-
+    @Override
     public String toString(){
-        String stringToBuild = super.toString() + "\nInventory:";
+        boolean isEmpty = true;
+        String stringToBuild = super.toString() + "\nInventory: ";
         for (int i = 0; i < inventory.length; i++) {
-            if(inventory[i]!=null)
-                stringToBuild += "\n"+ inventory[i].getName();
-        }
+            if(inventory[i]!=null) {
+                isEmpty = false;
+                stringToBuild += "\n" + inventory[i].getName();
+            } }
+        if(isEmpty)
+            stringToBuild += "Empty";
         return stringToBuild;
     }
 }
+//player is done
